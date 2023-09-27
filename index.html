@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="main.css" type="text/css" rel="stylesheet" />
+    <title>BC Altstetten &mdash; research</title>
+    <script type="text/javascript">
+        function loadIframeDone() {
+            console.log('iframe loaded');
+        }
+        
+        function loadIframe() {
+            console.log('iframe loading')
+            var base = "https://calendar.google.com/calendar/embed?height=1500&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FZurich"
+            var options = "&mode=AGENDA&showTitle=0&showNav=0&showDate=0&showTz=0&showTabs=0&showPrint=0&showCalendars=0"
+            var sources = [
+                "&src=NWYyMWQ2N2QyNmEzNmIyY2I3OGY2YjYxNjgwN2NkNGYxYjYyODZiMDIyY2ZkNzg4NDgxODUyYmI1ZGU4OGFiZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t", 
+                "&src=NDA4NWMyNjE3ZjIxZjk4MzkyOTBjMjY4MDU4OTc0YmYyMDg2ZDU4NWUyMDIwYjcxNzg3MTM2NWI4ZWViYWRjYkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t",
+                "&src=MmMzYzhjYWM1NWZhYmNmYjEwOTI1NjM5ODQ5YWJkOWVmNjM2MDRkNzQ3YjJiZDZlYzk0OWE4NDEwZTA3MDZhMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
+            ]
+            var colors = [
+                "&color=%23D81B60",
+                "&color=%23000000",
+                "&color=%2333B679"
+            ];
+            var iframes = document.getElementsByClassName("calendar_embeds");
+            console.log(iframes);
+            [...iframes].forEach((element, index) => {
+                console.log('huh')
+                element.src = base+options+sources[index]+colors[index];
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <h1>BC Altstetten</h1>
+        <h2>Game Plan</h2>
+
+        <h3>Erstes Team (3. Liga)</h3>
+        <iframe class="calendar_embeds" id="calender_embed_0" src=""
+        onLoad="loadIframeDone();"   width="600" height="500" frameborder="0" scrolling="no"></iframe>
+        
+        <h3>Zweites Team (4. Liga)</h3>
+        <iframe class="calendar_embeds" id="calender_embed_1" src=""
+        onLoad="loadIframeDone();"   width="600" height="500" frameborder="0" scrolling="no"></iframe>
+        
+
+        <h3>Mixed Team</h3>
+        <iframe class="calendar_embeds" id="calender_embed_2" src=""
+        onLoad="loadIframeDone();"   width="600" height="500" frameborder="0" scrolling="no"></iframe>
+        <script type="text/javascript">
+            loadIframe();
+        </script>
+    </main>
+    <footer>
+        <h2>Kontakt</h2>
+        <!-- <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#98;&#99;&#97;&#108;&#116;&#115;&#116;&#101;&#116;&#116;&#101;&#110;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#79;&#108;&#105;&#118;&#101;&#114;&#32;&#66;&#114;&#228;&#103;&#103;&#101;&#114;</a> -->
+        <p>
+            <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#98;&#99;&#97;&#108;&#116;&#115;&#116;&#101;&#116;&#116;&#101;&#110;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#66;&#67;&#32;&#65;&#108;&#116;&#115;&#116;&#101;&#116;&#116;&#101;&#110;&#32;&#40;&#101;&#109;&#97;&#105;&#108;&#41;</a>
+        </p>
+    </footer>
+</body>
+
+</html>
