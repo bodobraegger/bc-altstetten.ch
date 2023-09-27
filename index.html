@@ -54,7 +54,15 @@
         <iframe class="calendar_embeds" id="calender_embed_2" src=""
         onLoad="loadIframeDone();" frameborder="0" scrolling="no"></iframe>
         <script type="text/javascript">
+            // needs page to already be rendered up to this point
             loadIframe();
+            var isDarkReaderEnabled = "querySelector" in document &&
+                !!document.querySelector("meta[name=darkreader]");
+            if (isDarkReaderEnabled) {
+                [...document.getElementsByClassName('calendar_embeds')].forEach(e => {
+                    e.className += ' darkreader'
+                })
+            }
         </script>
     </main>
     <footer>
