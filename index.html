@@ -13,7 +13,7 @@
         
         function loadIframe() {
             console.log('iframe loading')
-            var base = "https://calendar.google.com/calendar/embed?height=1500&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FZurich"
+            var base = "https://calendar.google.com/calendar/embed?height=400&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FZurich"
             var options = "&mode=AGENDA&showTitle=0&showNav=0&showDate=0&showTz=0&showTabs=0&showPrint=0&showCalendars=0"
             var sources = [
                 "&src=NWYyMWQ2N2QyNmEzNmIyY2I3OGY2YjYxNjgwN2NkNGYxYjYyODZiMDIyY2ZkNzg4NDgxODUyYmI1ZGU4OGFiZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t", 
@@ -28,7 +28,6 @@
             var iframes = document.getElementsByClassName("calendar_embeds");
             console.log(iframes);
             [...iframes].forEach((element, index) => {
-                console.log('huh')
                 element.src = base+options+sources[index]+colors[index];
             });
         }
@@ -44,16 +43,16 @@
 
         <h3 style="color:#ff8db8">Erstes Team (3. Liga)</h3>
         <iframe class="calendar_embeds" id="calender_embed_0" src=""
-        onLoad="loadIframeDone();"   width="600" height="500" frameborder="0" scrolling="no"></iframe>
+        onLoad="loadIframeDone();" frameborder="0" scrolling="no"></iframe>
         
         <h3 style="color:#C1D3FF">Zweites Team (4. Liga)</h3>
         <iframe class="calendar_embeds" id="calender_embed_1" src=""
-        onLoad="loadIframeDone();"   width="600" height="500" frameborder="0" scrolling="no"></iframe>
+        onLoad="loadIframeDone();" frameborder="0" scrolling="no"></iframe>
         
 
         <h3 style="color:#62ae87">Mixed Team</h3>
         <iframe class="calendar_embeds" id="calender_embed_2" src=""
-        onLoad="loadIframeDone();"   width="600" height="500" frameborder="0" scrolling="no"></iframe>
+        onLoad="loadIframeDone();" frameborder="0" scrolling="no"></iframe>
         <script type="text/javascript">
             loadIframe();
         </script>
