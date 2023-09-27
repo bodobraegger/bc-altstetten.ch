@@ -82,17 +82,8 @@ footer {
     border: none;
     height: 300px;
     width: 100%;
+    filter: invert(1) hue-rotate(180deg);
 }
 .calendar_embeds.darkreader {
-    filter: none !important;
-}
-
-#calender_embed_0 {
-    filter: invert(1) hue-rotate(180deg);
-}
-#calender_embed_1 {
-    filter: invert(1) hue-rotate(180deg);
-}
-#calender_embed_2 {
-    filter: invert(1) hue-rotate(180deg);
+    filter: none;
 }
