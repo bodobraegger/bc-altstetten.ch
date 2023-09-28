@@ -6,8 +6,7 @@
 *::selection {
     background-color: #FF00FF;
     color: #000;
-    text-decoration-color: #000;
-    text-decoration-style: dashed;
+    text-decoration: none;
 }
 
 body {
